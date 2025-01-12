@@ -4,6 +4,11 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Install Tmux plugin manager
+TPM_HOME="${HOME}/.tmux/plugins/tpm"
+[ ! -d $TPM_HOME ] && mkdir -p "$(dirname $TPM_HOME)"
+[ ! -d $TPM_HOME/.git ] && git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
+
 # Install zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -50,6 +55,7 @@ setopt hist_find_no_dups
 alias c='clear'
 alias ls='ls --color'
 alias ll='ls -lhap --color'
+alias v='nvim'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
