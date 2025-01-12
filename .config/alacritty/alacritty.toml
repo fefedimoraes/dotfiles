@@ -8,3 +8,7 @@ size = 12.3
 [window]
 padding = { x = 0, y = 0 }
 opacity = 0.7
+decorations = "none"
+
+[mouse]
+hide_when_typing = true
