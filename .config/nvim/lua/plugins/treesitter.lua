@@ -4,21 +4,39 @@ return {
     config = function ()
         local configs = require('nvim-treesitter.configs')
 
-	configs.setup({
+        configs.setup({
             ensure_installed = {
+                'bash',
                 'c',
-		'lua',
-		'vim',
-		'vimdoc',
-		'query',
-		'javascript',
-		'typescript',
-		'html',
-	    },
-	    sync_install = false,
-	    highlight = { enable = true },
-	    indent = { enable = true },
-	})
+                'css',
+                'csv',
+                'diff',
+                'editorconfig',
+                'gitignore',
+                'gnuplot',
+                'html',
+                'http',
+                'java',
+                'javascript',
+                'json',
+                'kotlin',
+                'lua',
+                'markdown',
+                'markdown_inline',
+                'query',
+                'sql',
+                'tmux',
+                'toml',
+                'tsx',
+                'typescript',
+                'vim',
+                'vimdoc',
+                'yaml',
+            },
+            sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
+        })
     end
 }
 

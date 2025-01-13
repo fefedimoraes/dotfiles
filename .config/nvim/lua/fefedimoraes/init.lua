@@ -1,2 +1,3 @@
-require("fefedimoraes.remap")
+require('fefedimoraes.remap')
+require('fefedimoraes.opts')
 

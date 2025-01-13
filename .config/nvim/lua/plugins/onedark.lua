@@ -4,7 +4,7 @@ return {
     ending_tildes = true,
     code_style = {
         comments = 'italic',
-	functions = 'bold',
+        functions = 'bold',
     }
 }
 
