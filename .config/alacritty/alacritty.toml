@@ -3,7 +3,7 @@ live_config_reload = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 12.3
+size = 13.3
 
 [window]
 padding = { x = 0, y = 0 }
