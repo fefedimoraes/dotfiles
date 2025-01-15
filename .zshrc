@@ -61,6 +61,8 @@ alias c='clear'
 alias ls='ls --color'
 alias ll='ls -lhap --color'
 alias v='nvim'
+alias fzfp='fzf --preview="cat {}"'
+alias fzfe='nvim $(fzf --preview="cat {}")'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
