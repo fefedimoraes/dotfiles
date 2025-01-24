@@ -1,9 +1,15 @@
 [general]
 live_config_reload = true
+import = [
+    "./catppuccin-macchiato.toml"
+]
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 13.3
+normal = { family = "JetBrainsMono Nerd Font" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }
+bold_italic = { family = "JetBrainsMono Nerd Font" }
+size = 13.1
 
 [window]
 padding = { x = 0, y = 0 }
