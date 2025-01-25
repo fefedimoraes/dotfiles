@@ -66,8 +66,17 @@ alias c='clear'
 alias ls='ls --color'
 alias ll='ls -lhap --color'
 alias v='nvim'
-alias fzfp='fzf --preview="cat {}"'
-alias fzfe='nvim $(fzf --preview="cat {}")'
+if command -v bat &> /dev/null; then
+    export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+    alias cat='bat'
+    alias fzfp='fzf --preview="bat --color=always --style=numbers {}"'
+    alias fzfe='nvim $(fzf --preview="bat --color=always --style=numbers {}")'
+    alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+    alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+else
+    alias fzfp='fzf --preview="cat {}"'
+    alias fzfe='nvim $(fzf --preview="cat {}")'
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
