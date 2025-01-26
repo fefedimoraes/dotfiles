@@ -1,0 +1,11 @@
+brew "transmission-cli"
+
+cask "discord"
+cask "libreoffice"
+cask "pokemon-tcg-live"
+cask "steam"
+cask "telegram"
+cask "tor-browser"
+cask "transmission"
+cask "virtualbox"
+

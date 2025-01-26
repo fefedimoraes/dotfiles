@@ -42,6 +42,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Add sbin to path
 export PATH="/usr/local/sbin:$PATH"
+export EDITOR='nvim'
 
 # Keybindings
 bindkey -v
