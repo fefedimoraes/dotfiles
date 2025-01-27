@@ -13,8 +13,11 @@ size = 13.1
 
 [window]
 padding = { x = 0, y = 0 }
-opacity = 0.9
+opacity = 0.7
+blur = true
 decorations = "none"
+startup_mode = "Maximized"
 
 [mouse]
 hide_when_typing = true
+
