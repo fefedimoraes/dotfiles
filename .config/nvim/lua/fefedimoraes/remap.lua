@@ -1,9 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 
--- Opens File Explorer
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
-
 -- Auto-completes closing "brackets"-like
 vim.keymap.set('i', '"', '""<left>')
 vim.keymap.set('i', "'", "''<left>")
