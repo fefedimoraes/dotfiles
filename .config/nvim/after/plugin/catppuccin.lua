@@ -1,3 +1,5 @@
+local macchiato = require('catppuccin.palettes').get_palette('macchiato')
+
 require('catppuccin').setup({
     flavour = 'macchiato', -- latte, frappe, macchiato, mocha
     background = {         -- :h background
@@ -42,4 +44,6 @@ require('catppuccin').setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme('catppuccin')
+
+vim.api.nvim_set_hl(0, 'LineNr', { fg = macchiato.overlay0 })
 
