@@ -9,7 +9,7 @@ normal = { family = "JetBrainsMono Nerd Font" }
 bold = { family = "JetBrainsMono Nerd Font" }
 italic = { family = "JetBrainsMono Nerd Font" }
 bold_italic = { family = "JetBrainsMono Nerd Font" }
-size = 13.1
+size = 12.6
 
 [window]
 padding = { x = 0, y = 0 }
