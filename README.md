@@ -20,6 +20,12 @@ bat cache --build
 
 ## Other commands
 
+### Install Tmux plug-ins
+
+```bash
+<C-s> I
+```
+
 ### Unlink configuration files
 
 ```bash
