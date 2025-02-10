@@ -123,6 +123,10 @@ alias bwc='brazil-workplace-clean'
 alias bsps='brazil setup platform-support'
 
 # Custom Functions
+ada-login() {
+    ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once
+}
+
 brazil-workplace-clean() {
 for WORKSPACE in *; do
     if [ -d "${WORKSPACE}" ] && [ -f "${WORKSPACE}/packageInfo" ]; then
