@@ -12,10 +12,10 @@ bold_italic = { family = "JetBrainsMono Nerd Font" }
 size = 12.6
 
 [window]
-padding = { x = 0, y = 0 }
+padding = { x = 0, y = 6 }
 opacity = 1
 blur = false
-decorations = "none"
+decorations = "buttonless"
 startup_mode = "Maximized"
 
 [mouse]
