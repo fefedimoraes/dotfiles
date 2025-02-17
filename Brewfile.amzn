@@ -1,0 +1,7 @@
+tap "amazon/amazon", "ssh://git.amazon.com/pkg/HomebrewAmazon"
+
+brew "amazon/amazon/ninja-dev-sync"
+brew "amazon/amazon/udd"
+
+cask "finch"
+cask "jetbrains-toolbox"
