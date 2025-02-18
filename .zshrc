@@ -64,9 +64,16 @@ setopt hist_find_no_dups
 
 # Aliases
 alias c='clear'
-alias ls='ls --color'
-alias ll='ls -lhap --color'
 alias v='nvim'
+
+alias ld='eza -lD --icons=always'
+alias lf='eza -lF --color=always --icons=always | grep -v /'
+alias lh='eza -dl .* --group-directories-first --icons=always'
+alias ll='eza -al --group-directories-first --icons=always'
+alias ls='eza -alF --color=always --icons=always --sort=size | grep -v /'
+alias lt='eza -al --sort=modified --icons=always'
+alias lstree='eza -al --group-directories-first --icons=always --tree'
+
 if command -v bat &> /dev/null; then
     export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
     alias cat='bat'
