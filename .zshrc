@@ -66,6 +66,10 @@ setopt hist_find_no_dups
 alias c='clear'
 alias v='nvim'
 
+alias utc='gdate --utc +%FT%T.%3NZ'
+alias now='gdate +%FT%T.%3N%Z'
+alias millis='gdate +%s%3N'
+
 alias ld='eza -lD --icons=always'
 alias lf='eza -lF --color=always --icons=always | grep -v /'
 alias lh='eza -dl .* --group-directories-first --icons=always'
