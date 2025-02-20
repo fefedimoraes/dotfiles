@@ -142,6 +142,8 @@ alias bbbst='brc --allPackages brazil-build build'
 alias bwc='brazil-workplace-clean'
 alias bsps='brazil setup platform-support'
 
+alias bpc='brazil-package-cache stop || brazil-package-cache start'
+
 # Custom Functions
 ada-login() {
     ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once
