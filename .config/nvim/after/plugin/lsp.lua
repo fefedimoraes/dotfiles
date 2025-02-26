@@ -32,6 +32,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
         vim.keymap.set('n', '<F8>', function() builtin.diagnostics({ bufnr = 0 }) end, opts)
         vim.keymap.set('n', '<F9>', builtin.diagnostics, opts)
+        vim.keymap.set('n', '<leader>td', function()
+            local config = vim.diagnostic.config
+            local vt = config().virtual_text
+            config {
+                virtual_text = not vt,
+                underline = not vt,
+                signs = not vt,
+            }
+        end, opts)
     end,
 })
 
