@@ -1,13 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 
--- Auto-completes closing "brackets"-like
-vim.keymap.set('i', '"', '""<left>')
-vim.keymap.set('i', "'", "''<left>")
-vim.keymap.set('i', '(', '()<left>')
-vim.keymap.set('i', '[', '[]<left>')
-vim.keymap.set('i', '{', '{}<left>')
-
 -- Yanks to clipboard
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+yg_')
