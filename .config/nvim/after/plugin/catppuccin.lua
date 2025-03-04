@@ -38,6 +38,11 @@ require('catppuccin').setup({
         notify = false,
         nvimtree = true,
         treesitter = true,
+        indent_blankline = {
+            enabled = true,
+            scope_color = 'subtext0',
+            colored_indent_levels = true,
+        },
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
@@ -46,4 +51,3 @@ require('catppuccin').setup({
 vim.cmd.colorscheme('catppuccin')
 
 vim.api.nvim_set_hl(0, 'LineNr', { fg = macchiato.overlay0 })
-
