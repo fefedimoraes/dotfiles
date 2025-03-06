@@ -5,6 +5,7 @@ local telescopeBuiltin = require('telescope.builtin')
 telescope.setup({
     extensions = {
         file_browser = {
+            theme = 'ivy',
             hijack_netrw = true,
             hidden = { file_browser = true, folder_browser = true },
         },
