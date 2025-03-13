@@ -123,7 +123,7 @@ alias startodin='ssh -L 2009:localhost:2009 $DEV_DESKTOP -N -f -T -M -S $SOCK_FI
 alias stopodin='ssh -S $SOCK_FILE -O exit $DEV_DESKTOP'
 alias checkodin='ssh -S $SOCK_FILE -O check $DEV_DESKTOP'
 
-alias amazon-login="mwinit -s"
+alias amazon-login="mwinit -o -s"
 
 alias bb=brazil-build
 alias bba='brazil-build apollo-pkg'
