@@ -1,8 +1,18 @@
 local macchiato = require('catppuccin.palettes').get_palette('macchiato')
+local noice = require('noice')
 
 require('lualine').setup {
     options = {
         theme = 'catppuccin'
+    },
+    sections = {
+        lualine_a = {
+            {
+                noice.api.statusline.mode.get,
+                cond = noice.api.statusline.mode.has,
+            },
+            'mode',
+        }
     },
     tabline = {
         lualine_a = {},
@@ -20,4 +30,3 @@ require('lualine').setup {
         lualine_z = { 'tabs' }
     },
 }
-
