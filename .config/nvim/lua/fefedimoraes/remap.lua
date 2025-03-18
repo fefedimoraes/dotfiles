@@ -13,6 +13,9 @@ vim.keymap.set('n', '<leader>P', '"+P')
 vim.keymap.set('v', '<leader>p', '"+p')
 vim.keymap.set('v', '<leader>P', '"+P')
 
+-- Toggle Wrap
+vim.keymap.set({ 'n', 'v' }, '<C-z>', '<cmd>set wrap!<CR>')
+
 -- Moves selected lines up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
