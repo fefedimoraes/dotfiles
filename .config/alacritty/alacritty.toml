@@ -1,8 +1,6 @@
 [general]
 live_config_reload = true
-import = [
-    "./catppuccin-macchiato.toml"
-]
+import = ["./catppuccin-macchiato.toml"]
 
 [env]
 term = "xterm-256color"
@@ -20,7 +18,7 @@ opacity = 1
 blur = false
 decorations = "buttonless"
 startup_mode = "Maximized"
+option_as_alt = "Both"
 
 [mouse]
 hide_when_typing = true
-
