@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.editor.mini-move",
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.json",
