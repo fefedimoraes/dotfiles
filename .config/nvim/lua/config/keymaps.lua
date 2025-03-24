@@ -3,4 +3,4 @@
 -- Add any additional keymaps here
 
 -- Toggle Wrap
-vim.keymap.set({ "n", "v" }, "<C-z>", "<cmd>set wrap!<CR>")
+vim.keymap.set({ "n", "v" }, "<C-z>", "<cmd>set wrap!<CR>", { desc = "Toggle Line Wrap" })
