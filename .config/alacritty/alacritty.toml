@@ -14,8 +14,8 @@ size = 12.6
 
 [window]
 padding = { x = 2, y = 6 }
-opacity = 1
-blur = false
+opacity = 0.85
+blur = true
 decorations = "buttonless"
 startup_mode = "Maximized"
 option_as_alt = "Both"
