@@ -8,7 +8,6 @@ local apple = sbar.add("item", {
 		string = settings.modes.main.icon,
 		padding_right = 8,
 		padding_left = 8,
-		highlight_color = settings.modes.service.color,
 	},
 	label = {
 		drawing = false,
