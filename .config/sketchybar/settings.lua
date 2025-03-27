@@ -29,8 +29,8 @@ return {
 		default_color = function(workspace)
 			return colors.rainbow[workspace + 1]
 		end,
-		highlight_color = function()
-			return colors.yellow
+		highlight_color = function(workspace)
+			return colors.rainbow[workspace + 1]
 		end,
 		colors = {
 			background = colors.bg1,

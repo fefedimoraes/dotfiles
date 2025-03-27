@@ -11,7 +11,7 @@ return {
 	transparent = 0x00000000,
 
 	bar = {
-		bg = 0xd02c2e34,
+		bg = 0x00000000,
 		border = 0xff2c2e34,
 	},
 	popup = {
@@ -22,18 +22,20 @@ return {
 	bg2 = 0xff414550,
 
 	rainbow = {
-		0xffff007c,
-		0xffc53b53,
-		0xffff757f,
-		0xff41a6b5,
-		0xff4fd6be,
-		0xffc3e88d,
-		0xffffc777,
-		0xff9d7cd8,
-		0xffff9e64,
-		0xffbb9af7,
-		0xff7dcfff,
-		0xff7aa2f7,
+		0xff7dc4e4,
+		0xff8aadf4,
+		0xffb7bdf8,
+		0xfff4dbd6,
+		0xfff0c6c6,
+		0xfff5bde6,
+		0xffc6a0f6,
+		0xffed8796,
+		0xffee99a0,
+		0xfff5a97f,
+		0xffeed49f,
+		0xffa6da95,
+		0xff8bd5ca,
+		0xff91d7e3,
 	},
 
 	with_alpha = function(color, alpha)

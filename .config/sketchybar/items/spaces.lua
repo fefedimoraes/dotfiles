@@ -42,9 +42,9 @@ for i, workspace in ipairs(workspaces) do
 		padding_left = 1,
 		background = {
 			color = settings.items.colors.background,
-			border_width = 1,
+			border_width = selected and 3 or 1,
 			height = settings.items.height,
-			border_color = selected and settings.items.highlight_color(i) or settings.items.default_color(i),
+			border_color = settings.items.default_color(i),
 		},
 		popup = {
 			background = {
@@ -109,7 +109,8 @@ for i, workspace in ipairs(workspaces) do
 				highlight = selected,
 			},
 			background = {
-				border_color = selected and settings.items.highlight_color(i) or settings.items.default_color(i),
+				border_width = selected and 3 or 1,
+				border_color = settings.items.default_color(i),
 			},
 		})
 	end)
