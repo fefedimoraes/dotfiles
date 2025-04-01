@@ -1,6 +1,7 @@
 # Set PATH, MANPATH, etc., for Homebrew
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
 [ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Intel
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # Add Homebrew OpenJDK to path
 
 # Start Tmux by default
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
