@@ -18,4 +18,5 @@ vim.g.mkdp_preview_options = {
   uml = {
     server = "http://localhost:8080",
   },
+  disable_sync_scroll = 1,
 }
