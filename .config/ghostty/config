@@ -1,5 +1,5 @@
 # General
-theme = catppuccin-macchiato.conf
+theme = catppuccin-macchiato
 
 # Window
 window-padding-y = 6,0
