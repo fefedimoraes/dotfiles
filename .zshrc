@@ -1,6 +1,7 @@
 # Set PATH, MANPATH, etc., for Homebrew
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
-[ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Intel
+[ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Apple Intel
+[ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Linux
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # Add Homebrew OpenJDK to path
 
 # Start Tmux by default
@@ -148,6 +149,8 @@ alias bwc='brazil-workplace-clean'
 alias bsps='brazil setup platform-support'
 
 alias bpc='brazil-package-cache stop; brazil-package-cache start'
+
+alias mossy='/apollo/env/Mossy/bin/mossy'
 
 # Custom Functions
 ada-login() {
