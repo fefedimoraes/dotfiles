@@ -80,6 +80,8 @@ alias ls='eza -alF --color=always --icons=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified --icons=always'
 alias lstree='eza -al --group-directories-first --icons=always --tree'
 
+alias lg='lazygit'
+
 if command -v bat &> /dev/null; then
     export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
     alias cat='bat'
