@@ -69,6 +69,7 @@ brew "ruby-build"
 brew "starship"
 brew "stow"
 brew "tcl-tk", link: false
+brew "termscp"
 brew "tesseract"
 brew "tmux"
 brew "tor"
