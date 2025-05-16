@@ -1,0 +1,20 @@
+# Terminal
+shift + ctrl - t : open "/Applications/Ghostty.app"
+
+# IDE
+shift + ctrl - i : open "/Applications/IntelliJ IDEA.app"
+shift + ctrl - v : open "/Applications/Visual Studio Code.app"
+
+# Browser
+shift + ctrl - b : open "/Applications/Google Chrome.app"
+shift + ctrl - f : open "/Applications/Firefox.app"
+
+# Comms
+shift + ctrl - a : open "/Applications/Amazon Chime.app"
+shift + ctrl - s : open "/Applications/Slack.app"
+shift + ctrl - m : open "/Applications/Microsoft Outlook.app"
+shift + ctrl - y : open "/System/Applications/Messages.app"
+
+# OS
+shift + ctrl - e : open ~
+shift + ctrl - z : open "/System/Applications/Music.app"
