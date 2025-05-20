@@ -1,4 +1,5 @@
 # Set PATH, MANPATH, etc., for Homebrew
+[ -f /apollo/env/envImprovement/var/zshrc ] && source /apollo/env/envImprovement/var/zshrc
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
 [ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Apple Intel
 [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Linux
@@ -123,7 +124,6 @@ eval "$(starship init zsh)"
 
 # AMZN-specific
 if [ "$(whoami)" = "moraesf" ]; then
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 export PATH=$PATH:$HOME/.toolbox/bin
 export PATH="$PATH:/Users/moraesf/Library/Application Support/JetBrains/Toolbox/scripts"
