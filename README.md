@@ -31,4 +31,3 @@ bat cache --build
 ```bash
 stow -D .
 ```
-
