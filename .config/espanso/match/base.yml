@@ -1,0 +1,31 @@
+matches:
+  - trigger: ":cr:"
+    form: |
+      ## Changes
+
+      ### [[package]]
+
+      #### Revision #1
+
+      -
+
+      ## Testing
+
+      ```bash
+      [[testingCommand]]
+      ```
+
+      ## Issues
+
+      - https://i.amazon.com/[[ticket]]
+    form_fields:
+      testingCommand:
+        type: choice
+        values:
+          - brazil-build
+          - npm run test:update
+
+  - trigger: ":sig:"
+    replace: |
+      Kindly,
+      Fernando Moraes
