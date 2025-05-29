@@ -68,6 +68,10 @@ setopt hist_find_no_dups
 # Aliases
 alias c='clear'
 alias v='nvim'
+alias t='btop'
+alias lg='lazygit'
+alias uid="id -u"
+alias gid="id -g"
 
 alias utc='gdate --utc +%FT%T.%3NZ'
 alias now='gdate +%FT%T.%3N%Z'
@@ -81,11 +85,7 @@ alias ls='eza -alF --color=always --icons=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified --icons=always'
 alias lstree='eza -al --group-directories-first --icons=always --tree'
 
-alias lg='lazygit'
-
 alias lsconn="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
-alias uid="id -u"
-alias gid="id -g"
 
 if command -v bat &> /dev/null; then
     export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
