@@ -16,6 +16,9 @@ stow .
 
 # Rebuild bat cache
 bat cache --build
+
+# Start skhd
+skhd --start-service
 ```
 
 ## Other commands
