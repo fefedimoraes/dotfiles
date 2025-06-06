@@ -5,8 +5,8 @@
   name = Fernando Ferreira Diniz de Moraes
   email = 1682707+fefedimoraes@users.noreply.github.com
 
-[includeIf "gitdir:~/workspace/**/**"]
-  path = .amzn.gitconfig
+[includeIf "gitdir:~/workplace/"]
+  path = ~/.amzn.gitconfig
 
 [credential]
   helper = store
