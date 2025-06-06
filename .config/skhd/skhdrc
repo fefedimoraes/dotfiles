@@ -1,23 +1,24 @@
 # Terminal
-shift + ctrl - t : open "/Applications/Ghostty.app"
+shift + ctrl - t : open "/Applications/Ghostty.app" && centerd active
 
 # IDE
-shift + ctrl - i : open "/Applications/IntelliJ IDEA.app"
-shift + ctrl - v : open "/Applications/Visual Studio Code.app"
+shift + ctrl - i : open "/Applications/IntelliJ IDEA.app" && centerd active
+shift + ctrl - v : open "/Applications/Visual Studio Code.app" && centerd active
+
 
 # Browser
-shift + ctrl - b : open "/Applications/Google Chrome.app"
-shift + ctrl - f : open "/Applications/Firefox.app"
+shift + ctrl - b : open "/Applications/Google Chrome.app" && centerd active
+shift + ctrl - f : open "/Applications/Firefox.app" && centerd active
 
 # Comms
-shift + ctrl - a : open "/Applications/Amazon Chime.app"
-shift + ctrl - s : open "/Applications/Slack.app"
-shift + ctrl - m : open "/Applications/Microsoft Outlook.app"
-shift + ctrl - y : open "/System/Applications/Messages.app"
+shift + ctrl - a : open "/Applications/Amazon Chime.app" && centerd active
+shift + ctrl - s : open "/Applications/Slack.app" && centerd active
+shift + ctrl - m : open "/Applications/Microsoft Outlook.app" && centerd active
+shift + ctrl - y : open "/System/Applications/Messages.app" && centerd active
 
 # OS
-shift + ctrl - e : open ~
-shift + ctrl - z : open "/System/Applications/Music.app"
+shift + ctrl - e : open ~ && centerd active
+shift + ctrl - z : open "/System/Applications/Music.app" && centerd active
 
 # Personal
 shift + alt + ctrl - t : open "/Applications/Tibia.app"
