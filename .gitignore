@@ -2,6 +2,7 @@
 *.ipr
 *.log
 .DS_Store
+.config/tigervnc/
 .idea/
 .vscode/
 build
