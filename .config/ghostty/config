@@ -10,3 +10,6 @@ macos-option-as-alt = true
 
 # Mouse
 mouse-hide-while-typing = true
+
+# Cursor
+cursor-opacity = 0.5
