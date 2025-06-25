@@ -29,3 +29,19 @@ matches:
     replace: |
       Kindly,
       Fernando Moraes
+
+  - trigger: ":bb:"
+    replace: |
+      ## Testing
+
+      ```bash
+      brazil-build
+      ```
+
+  - trigger: ":snap:"
+    replace: |
+      ## Testing
+
+      ```bash
+      npm run test:update
+      ```
