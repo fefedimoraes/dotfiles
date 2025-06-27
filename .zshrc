@@ -1,4 +1,6 @@
 # Set PATH, MANPATH, etc., for Homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1 # Do not update on install
+
 [ -f /apollo/env/envImprovement/var/zshrc ] && source /apollo/env/envImprovement/var/zshrc
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
 [ -f /usr/local/Homebrew/bin/brew ] && eval "$(/usr/local/Homebrew/bin/brew shellenv)" # Apple Intel
