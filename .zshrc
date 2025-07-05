@@ -75,6 +75,7 @@ alias lg='lazygit'
 alias uid="id -u"
 alias gid="id -g"
 alias :q="exit"
+alias ..="cd .."
 
 alias utc='gdate --utc +%FT%T.%3NZ'
 alias now='gdate +%FT%T.%3N%Z'
