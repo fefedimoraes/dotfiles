@@ -16,6 +16,8 @@ shift + ctrl - d : open "/Applications/zoom.us.app" && centerd active
 shift + ctrl - s : open "/Applications/Slack.app" && centerd active
 shift + ctrl - m : open "/Applications/Microsoft Outlook.app" && centerd active
 shift + ctrl - y : open "/System/Applications/Messages.app" && centerd active
+shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd active
+
 
 # OS
 shift + ctrl - e : open ~ && centerd active
