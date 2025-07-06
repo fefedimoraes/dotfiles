@@ -19,6 +19,9 @@ bat cache --build
 
 # Start skhd
 skhd --start-service
+
+# Start JankyBorders
+brew services start borders
 ```
 
 ## Other commands
