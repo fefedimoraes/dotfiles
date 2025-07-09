@@ -14,7 +14,7 @@ shift + ctrl - f : open "/Applications/Firefox.app" && centerd active
 shift + ctrl - a : open "/Applications/Amazon Chime.app" && centerd active
 shift + ctrl - d : open "/Applications/zoom.us.app" && centerd active
 shift + ctrl - s : open "/Applications/Slack.app" && centerd active
-shift + ctrl - m : open "/Applications/Microsoft Outlook.app" && centerd active
+shift + ctrl - m : ([ "$(whoami)" = "fefedimoraes" ] && open "/System/Applications/Mail.app" || open "/Applications/Microsoft Outlook.app") && centerd active
 shift + ctrl - y : open "/System/Applications/Messages.app" && centerd active
 shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd active
 
