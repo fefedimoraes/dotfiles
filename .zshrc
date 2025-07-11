@@ -92,28 +92,49 @@ alias lstree='eza -al --group-directories-first --icons=always --tree'
 alias lsconn="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
 
 if command -v bat &> /dev/null; then
-    export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
-    alias cat='bat'
-    alias fzfp='fzf --preview="bat --color=always --style=numbers {}"'
-    alias fzfe='nvim $(fzf --preview="bat --color=always --style=numbers {}")'
-    alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-    alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+  export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+  alias cat='bat'
+  alias fzfp='fzf --preview="bat --color=always --style=numbers {}"'
+  alias fzfe='nvim $(fzf --preview="bat --color=always --style=numbers {}")'
+  alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+  alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 else
-    alias fzfp='fzf --preview="cat {}"'
-    alias fzfe='nvim $(fzf --preview="cat {}")'
+  alias fzfp='fzf --preview="cat {}"'
+  alias fzfe='nvim $(fzf --preview="cat {}")'
 fi
 
-function y() {
-    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-    yazi "$@" --cwd-file="$tmp"
-    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-        builtin cd -- "$cwd"
-    fi
-    rm -f -- "$tmp"
+function mth() {
+  local millis=${1-}
+
+  if [ -z "$millis" ]; then
+    script="${0##*/}"
+    echo "usage: $script milliseconds-since-epoch"
+    echo "example: $script 1620418406902"
+    return
+  fi
+
+  local float=$(echo "scale=3; $millis / 1000" | bc)
+
+  local command="date"
+  # add for MacOS portability, requires coreutils to be installed via homebrew
+  if [ ! -z "$(which gdate)" ]; then
+    command="gdate"
+  fi
+
+  $command -u -d "@$float" --iso-8601='seconds'
 }
 
-function ff () {
-    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
+function ff() {
+  aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 }
 
 # NVM
@@ -163,30 +184,30 @@ alias bpc='brazil-package-cache stop; brazil-package-cache start'
 alias mossy='/apollo/env/Mossy/bin/mossy'
 
 # Custom Functions
-ada-login() {
-    ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once
+function ada-login() {
+  ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once
 }
 
-brazil-workplace-clean() {
-for WORKSPACE in *; do
+function brazil-workplace-clean() {
+  for WORKSPACE in *; do
     if [ -d "${WORKSPACE}" ] && [ -f "${WORKSPACE}/packageInfo" ]; then
-        pushd "${WORKSPACE}" >/dev/null
-        echo "Cleaning ${WORKSPACE}..."
-        bws clean
-        popd >/dev/null
+      pushd "${WORKSPACE}" >/dev/null
+      echo "Cleaning ${WORKSPACE}..."
+      bws clean
+      popd >/dev/null
     fi
-done
+  done
 }
 
-startportforward() {
-    ssh -L $1:localhost:$1 $DEV_DESKTOP -N -f -T -M -S /tmp/ssh-socket-$1-$DEV_DESKTOP -o ExitOnForwardFailure=yes
+function startportforward() {
+  ssh -L $1:localhost:$1 $DEV_DESKTOP -N -f -T -M -S /tmp/ssh-socket-$1-$DEV_DESKTOP -o ExitOnForwardFailure=yes
 }
 
-stopportforward() {
-    ssh -S /tmp/ssh-socket-$1-$DEV_DESKTOP -O exit $DEV_DESKTOP
+function stopportforward() {
+  ssh -S /tmp/ssh-socket-$1-$DEV_DESKTOP -O exit $DEV_DESKTOP
 }
 
-checkportforward() {
-    ssh -S /tmp/ssh-socket-$1-$DEV_DESKTOP -O check $DEV_DESKTOP
+function checkportforward() {
+  ssh -S /tmp/ssh-socket-$1-$DEV_DESKTOP -O check $DEV_DESKTOP
 }
 fi
