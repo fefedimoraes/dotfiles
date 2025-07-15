@@ -8,3 +8,4 @@
 build
 kls_database.db
 kotlinLspClasspath.sh
+scripts/personal.sh
