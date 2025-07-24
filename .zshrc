@@ -45,6 +45,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Load edit command line in $EDITOR
+autoload edit-command-line
+zle -N edit-command-line
+
 # Add sbin to path
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR='nvim'
@@ -53,6 +57,7 @@ export EDITOR='nvim'
 bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey -M vicmd v edit-command-line # ESC-v to edit command in $EDITOR
 
 # History
 HISTSIZE=5000
