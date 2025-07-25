@@ -2,8 +2,12 @@
 *.ipr
 *.log
 .DS_Store
+.classpath
 .config/tigervnc/
+.factorypath
 .idea/
+.project
+.settings
 .vscode/
 build
 kls_database.db
