@@ -13,6 +13,9 @@ vim.opt.listchars:append({
   nbsp = "␣",
 })
 
+-- Better floating window
+vim.opt.winborder = "rounded"
+
 -- Markdown Preview options
 vim.g.mkdp_preview_options = {
   uml = {
