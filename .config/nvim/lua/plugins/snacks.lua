@@ -14,8 +14,9 @@ return {
             align = "center",
             cmd = "cat ~/.config/nvim/neovim-logo.cat",
             height = 20,
+            width = 37,
             indent = 12,
-            padding = 1,
+            padding = 2,
           },
           {
             section = "keys",
