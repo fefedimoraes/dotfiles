@@ -169,6 +169,7 @@ alias amazon-login="mwinit -f -s"
 alias otp-amazon-login="mwinit -o -s"
 
 alias bb=brazil-build
+alias cbb='brazil-build clean && brazil-build'
 alias bba='brazil-build apollo-pkg'
 alias bre='brazil-runtime-exec'
 alias brc='brazil-recursive-cmd'
