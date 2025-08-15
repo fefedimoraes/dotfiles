@@ -45,3 +45,7 @@ matches:
       ```bash
       npm run test:update
       ```
+
+  - trigger: ":crna:"
+    replace: |
+      Not applicable. See other related comments in previous revisions.
