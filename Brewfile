@@ -68,6 +68,7 @@ brew "rbenv"
 brew "ripgrep"
 brew "ruby"
 brew "ruby-build"
+brew "socsieng/tap/sendkeys"
 brew "starship"
 brew "stow"
 brew "tcl-tk", link: false
