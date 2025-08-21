@@ -8,6 +8,7 @@ shift + ctrl - v : open "/Applications/Visual Studio Code.app" && centerd cycle
 
 # Browser
 shift + ctrl - b : open "/Applications/Google Chrome.app" && centerd cycle
+shift + ctrl + alt - b : open "/Applications/Google Chrome.app" && centerd cycle backwards
 shift + ctrl - f : open "/Applications/Firefox.app" && centerd cycle
 
 # Comms
