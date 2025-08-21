@@ -1,27 +1,26 @@
 # Terminal
-shift + ctrl - t : open "/Applications/Ghostty.app" && centerd active
+shift + ctrl - t : open "/Applications/Ghostty.app" && centerd cycle
 
 # IDE
-shift + ctrl - i : open "/Applications/IntelliJ IDEA.app" && centerd active
-shift + ctrl - v : open "/Applications/Visual Studio Code.app" && centerd active
+shift + ctrl - i : open "/Applications/IntelliJ IDEA.app" && centerd cycle
+shift + ctrl - v : open "/Applications/Visual Studio Code.app" && centerd cycle
 
 
 # Browser
-shift + ctrl - b : open "/Applications/Google Chrome.app" && centerd active
-shift + ctrl - f : open "/Applications/Firefox.app" && centerd active
+shift + ctrl - b : open "/Applications/Google Chrome.app" && centerd cycle
+shift + ctrl - f : open "/Applications/Firefox.app" && centerd cycle
 
 # Comms
-shift + ctrl - a : open "/Applications/Amazon Chime.app" && centerd active
-shift + ctrl - d : open "/Applications/zoom.us.app" && centerd active
-shift + ctrl - s : open "/Applications/Slack.app" && centerd active
-shift + ctrl - m : ([ "$(whoami)" = "fefedimoraes" ] && open "/System/Applications/Mail.app" || open "/Applications/Microsoft Outlook.app") && centerd active
-shift + ctrl - y : open "/System/Applications/Messages.app" && centerd active
-shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd active
-
+shift + ctrl - a : open "/Applications/Amazon Chime.app" && centerd cycle
+shift + ctrl - d : open "/Applications/zoom.us.app" && centerd cycle
+shift + ctrl - s : open "/Applications/Slack.app" && centerd cycle
+shift + ctrl - m : ([ "$(whoami)" = "fefedimoraes" ] && open "/System/Applications/Mail.app" || open "/Applications/Microsoft Outlook.app") && centerd cycle
+shift + ctrl - y : open "/System/Applications/Messages.app" && centerd cycle
+shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd cycle
 
 # OS
-shift + ctrl - e : open ~ && centerd active
-shift + ctrl - z : open "/System/Applications/Music.app" && centerd active
+shift + ctrl - e : open ~ && centerd cycle
+shift + ctrl - z : open "/System/Applications/Music.app" && centerd cycle
 
 # Personal
 shift + alt + ctrl - t : open "/Applications/Tibia.app"
