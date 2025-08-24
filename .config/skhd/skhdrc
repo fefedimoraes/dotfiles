@@ -1,27 +1,27 @@
 # Terminal
-shift + ctrl - t : open "/Applications/Ghostty.app" && centerd cycle
+shift + ctrl - t : centerd cycle --app "Ghostty" || open "/Applications/Ghostty.app"
 
 # IDE
-shift + ctrl - i : open "/Applications/IntelliJ IDEA.app" && centerd cycle
-shift + ctrl - v : open "/Applications/Visual Studio Code.app" && centerd cycle
-
+shift + ctrl - i : centerd cycle --app "IntelliJ IDEA" || open "/Applications/IntelliJ IDEA.app"
+shift + ctrl - v : centerd cycle --app "Code" || open "/Applications/Visual Studio Code.app"
+shift + ctrl - x : centerd cycle --app "Xcode" || open "/Applications/Xcode.app"
 
 # Browser
-shift + ctrl - b : open "/Applications/Google Chrome.app" && centerd cycle
-shift + ctrl + alt - b : open "/Applications/Google Chrome.app" && centerd cycle backwards
-shift + ctrl - f : open "/Applications/Firefox.app" && centerd cycle
+shift + ctrl - b : centerd cycle --app "Google Chrome" || open "/Applications/Google Chrome.app"
+shift + ctrl + alt - b : centerd cycle backwards --app "Google Chrome" || open "/Applications/Google Chrome.app"
+shift + ctrl - f : centerd cycle --app "Firefox" || open "/Applications/Firefox.app"
 
 # Comms
-shift + ctrl - a : open "/Applications/Amazon Chime.app" && centerd cycle
-shift + ctrl - d : open "/Applications/zoom.us.app" && centerd cycle
-shift + ctrl - s : open "/Applications/Slack.app" && centerd cycle
-shift + ctrl - m : ([ "$(whoami)" = "fefedimoraes" ] && open "/System/Applications/Mail.app" || open "/Applications/Microsoft Outlook.app") && centerd cycle
-shift + ctrl - y : open "/System/Applications/Messages.app" && centerd cycle
-shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd cycle
+shift + ctrl - a : centerd cycle --app "Amazon Chime" || open "/Applications/Amazon Chime.app"
+shift + ctrl - d : centerd cycle --app "zoom.us" || open "/Applications/zoom.us.app"
+shift + ctrl - s : centerd cycle --app "Slack" || open "/Applications/Slack.app"
+shift + ctrl - m : ([ "$(whoami)" = "fefedimoraes" ] && (centerd cycle --app "Mail" || open "/System/Applications/Mail.app") || (centerd cycle --app "Microsoft Outlook" || open "/Applications/Microsoft Outlook.app"))
+shift + ctrl - y : centerd cycle --app "Messages" || open "/System/Applications/Messages.app"
+shift + ctrl - w : osascript ~/.config/apple-scripts/focus-tab.scpt web.whatsapp.com && centerd active
 
 # OS
-shift + ctrl - e : open ~ && centerd cycle
-shift + ctrl - z : open "/System/Applications/Music.app" && centerd cycle
+shift + ctrl - e : centerd cycle --app "Finder" || open ~
+shift + ctrl - z : centerd cycle --app "Music" || open "/System/Applications/Music.app"
 
 # Personal
-shift + alt + ctrl - t : open "/Applications/Tibia.app"
+shift + alt + ctrl - t : centerd cycle --app "Tibia" || open "/Applications/Tibia.app"
