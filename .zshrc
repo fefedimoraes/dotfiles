@@ -185,6 +185,9 @@ eval "$(starship init zsh)"
 
 # AMZN-specific
 if [ "$(whoami)" = "moraesf" ]; then
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 export PATH=$PATH:$HOME/.toolbox/bin
 export PATH="$PATH:/Users/moraesf/Library/Application Support/JetBrains/Toolbox/scripts"
@@ -248,4 +251,7 @@ function stopportforward() {
 function checkportforward() {
   ssh -S /tmp/ssh-socket-$1-$DEV_DESKTOP -O check $DEV_DESKTOP
 }
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 fi
