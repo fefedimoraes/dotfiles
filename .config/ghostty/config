@@ -13,6 +13,8 @@ mouse-hide-while-typing = true
 
 # Cursor
 cursor-opacity = 0.5
+
+# Shaders
 # custom-shader = ./hackr-sh-shaders/animated-gradient-shader.glsl
 # custom-shader = ./hackr-sh-shaders/bettercrt.glsl
 # custom-shader = ./hackr-sh-shaders/bloom.glsl
@@ -45,3 +47,11 @@ cursor-opacity = 0.5
 # custom-shader = ./hackr-sh-shaders/tft.glsl
 # custom-shader = ./hackr-sh-shaders/underwater.glsl
 # custom-shader = ./hackr-sh-shaders/water.glsl
+
+# custom-shader = ./sahaj-b-shaders/cursor_sweep.glsl
+# custom-shader = ./sahaj-b-shaders/cursor_tail.glsl
+custom-shader = ./sahaj-b-shaders/cursor_warp.glsl
+# custom-shader = ./sahaj-b-shaders/rectangle_boom_cursor.glsl
+custom-shader = ./sahaj-b-shaders/ripple_cursor.glsl
+# custom-shader = ./sahaj-b-shaders/ripple_rectangle_cursor.glsl
+# custom-shader = ./sahaj-b-shaders/sonic_boom_cursor.glsl
