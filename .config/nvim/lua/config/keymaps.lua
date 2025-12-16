@@ -17,3 +17,5 @@ vim.keymap.set("n", "N", "Nzzzv") -- when moving to the previous search match
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("v", "<leader>de", "<cmd>g/^$/d<CR>", { desc = "Delete empty lines" })
+
+vim.keymap.set("n", "<leader>fm", "<cmd>set filetype=markdown<CR>", { desc = "Set file type as Markdown" })
