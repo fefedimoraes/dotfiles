@@ -7,6 +7,9 @@ return {
           files = { hidden = true },
         },
       },
+      scroll = {
+        enabled = false,
+      },
       dashboard = {
         sections = {
           {
