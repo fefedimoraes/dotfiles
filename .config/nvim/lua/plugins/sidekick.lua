@@ -7,6 +7,11 @@ return {
         backend = "tmux",
         enabled = true,
       },
+      tools = {
+        kiro = {
+          cmd = { "kiro-cli" },
+        },
+      },
     },
     nes = {
       enabled = false,
