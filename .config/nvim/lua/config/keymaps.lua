@@ -19,3 +19,4 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("v", "<leader>de", "<cmd>g/^$/d<CR>", { desc = "Delete empty lines" })
 
 vim.keymap.set("n", "<leader>fm", "<cmd>set filetype=markdown<CR>", { desc = "Set file type as Markdown" })
+vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Open Markdown Preview" })
