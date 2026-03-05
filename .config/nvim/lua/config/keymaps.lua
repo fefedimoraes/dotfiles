@@ -14,7 +14,12 @@ vim.keymap.set("n", "N", "Nzzzv") -- when moving to the previous search match
 -- vim.keymap.set("n", "}", "}zz") -- when moving down a block
 
 -- Replace hovered over word
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set(
+  "n",
+  "<leader>r",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace hovered word" }
+)
 
 vim.keymap.set("v", "<leader>de", "<cmd>g/^$/d<CR>", { desc = "Delete empty lines" })
 
