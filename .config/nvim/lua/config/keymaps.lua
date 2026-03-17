@@ -25,3 +25,11 @@ vim.keymap.set("v", "<leader>de", "<cmd>g/^$/d<CR>", { desc = "Delete empty line
 
 vim.keymap.set("n", "<leader>fm", "<cmd>set filetype=markdown<CR>", { desc = "Set file type as Markdown" })
 vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Open Markdown Preview" })
+
+vim.keymap.set("n", "<leader>dw", function()
+  if vim.api.nvim_get_option_value("diff", { win = 0 }) then
+    vim.cmd("diffoff")
+  else
+    vim.cmd("windo diffthis")
+  end
+end, { desc = "Toggle diff current windows" })
