@@ -89,7 +89,6 @@ brew "yt-dlp"
 brew "zlib"
 brew "zoxide"
 
-cask "aerospace"
 cask "alacritty"
 cask "basictex"
 cask "displaylink"
