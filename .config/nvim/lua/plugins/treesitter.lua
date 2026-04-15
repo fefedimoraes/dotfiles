@@ -16,6 +16,7 @@ return {
       "javascript",
       "json",
       "kotlin",
+      "ledger",
       "lua",
       "markdown",
       "markdown_inline",
