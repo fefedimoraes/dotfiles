@@ -15,6 +15,12 @@ mouse-hide-while-typing = true
 # Cursor
 cursor-opacity = 0.5
 
+# Font
+font-thicken = true
+font-family = "0xProto Nerd Font Mono"
+font-style-bold-italic = Italic
+font-feature = ss01
+
 # Shaders
 # custom-shader = ./hackr-sh-shaders/animated-gradient-shader.glsl
 # custom-shader = ./hackr-sh-shaders/bettercrt.glsl
