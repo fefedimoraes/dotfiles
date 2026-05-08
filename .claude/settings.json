@@ -1,0 +1,33 @@
+{
+  "enabledPlugins": {
+    "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true
+  },
+  "env": {
+    "AWS_PROFILE": "claude-code-DO-NOT-DELETE",
+    "AWS_REGION": "us-west-2"
+  },
+  "extraKnownMarketplaces": {
+    "aim": {
+      "source": {
+        "path": "/Users/moraesf/.aim/cc-plugins",
+        "source": "directory"
+      }
+    }
+  },
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Bash(cat *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(which *)",
+      "Bash(git status)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git branch *)"
+    ]
+  },
+  "syntaxHighlightingDisabled": false,
+  "theme": "auto"
+}
