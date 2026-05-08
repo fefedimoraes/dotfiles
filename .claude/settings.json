@@ -28,6 +28,10 @@
       "Bash(git branch *)"
     ]
   },
+  "statusLine": {
+    "command": "bash ~/.claude/statusline-command.sh",
+    "type": "command"
+  },
   "syntaxHighlightingDisabled": false,
   "theme": "auto"
 }
