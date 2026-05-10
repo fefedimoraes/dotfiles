@@ -33,3 +33,22 @@ vim.keymap.set("n", "<leader>dw", function()
     vim.cmd("windo diffthis")
   end
 end, { desc = "Toggle diff current windows" })
+
+vim.keymap.set("n", "<leader>yu", function()
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  local matches = {}
+
+  for _, line in ipairs(lines) do
+    for url in line:gmatch("https?://[%w%%#_/?&=%.%-~@:+,;]+") do
+      table.insert(matches, url)
+    end
+  end
+
+  if #matches == 0 then
+    print("No URLs found in buffer")
+    return
+  end
+
+  vim.fn.setreg("+", table.concat(matches, "\n"))
+  print(string.format("Copied %d URLs to clipboard!", #matches))
+end, { desc = "Copy all URLs in buffer to clipboard" })
