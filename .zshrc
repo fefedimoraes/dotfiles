@@ -256,6 +256,10 @@ function ada-login() {
   ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once
 }
 
+function ada-login-ro() {
+  ada credentials update --account=$1 --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once --conduit-read-only
+}
+
 function brazil-workplace-clean() {
   for WORKSPACE in *; do
     if [ -d "${WORKSPACE}" ] && [ -f "${WORKSPACE}/packageInfo" ]; then
