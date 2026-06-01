@@ -16,10 +16,9 @@ mouse-hide-while-typing = true
 cursor-opacity = 0.5
 
 # Font
-font-thicken = true
-font-family = "0xProto Nerd Font Mono"
-font-style-bold-italic = Italic
-font-feature = ss01
+font-size = 14
+font-family = "Maple Mono NF"
+font-feature = calt, zero, cv05, cv08, cv10, cv38, cv41, cv43, cv66, ss03, ss08, ss10, ss11
 
 # Shaders
 # custom-shader = ./hackr-sh-shaders/animated-gradient-shader.glsl
