@@ -5,7 +5,7 @@
   name = Fernando Ferreira Diniz de Moraes
   email = 1682707+fefedimoraes@users.noreply.github.com
 
-[includeIf "gitdir:~/workplace/"]
+[includeIf "hasconfig:remote.*.url:*://git.amazon.com*/**"]
   path = ~/.amzn.gitconfig
 
 [credential]
