@@ -1,38 +1,53 @@
 {
-  "env": {
-    "AWS_PROFILE": "claude-code-DO-NOT-DELETE",
-    "AWS_REGION": "us-west-2"
-  },
-  "permissions": {
-    "allow": [
-      "Read",
-      "Bash(cat *)",
-      "Bash(ls *)",
-      "Bash(find *)",
-      "Bash(which *)",
-      "Bash(git status)",
-      "Bash(git log *)",
-      "Bash(git diff *)",
-      "Bash(git branch *)"
-    ]
-  },
-  "model": "opus",
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
-  },
+  "availableModels": [
+    "opus",
+    "sonnet"
+  ],
   "enabledPlugins": {
+    "AmazonBuilderCoreAIAgents-core@aim": true,
     "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true,
+    "jdtls-lsp@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "AWS_REGION": "us-west-2"
   },
   "extraKnownMarketplaces": {
     "aim": {
       "source": {
-        "source": "directory",
-        "path": "/Users/moraesf/.aim/cc-plugins"
+        "path": "/Users/moraesf/.aim/cc-plugins",
+        "source": "directory"
       }
     }
   },
+  "includeCoAuthoredBy": false,
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Bash(cat *)",
+      "Bash(find *)",
+      "Bash(git branch *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git status)",
+      "Bash(ls *)",
+      "Bash(node dist/index.js --help)",
+      "Bash(npx eslint *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vitest *)",
+      "Bash(which *)",
+      "Read",
+      "mcp__builder-mcp__InternalCodeSearch",
+      "mcp__builder-mcp__InternalSearch",
+      "mcp__builder-mcp__ReadInternalWebsites",
+      "mcp__builder-mcp__TicketingReadActions"
+    ]
+  },
+  "statusLine": {
+    "command": "bash ~/.claude/statusline-command.sh",
+    "type": "command"
+  },
   "syntaxHighlightingDisabled": false,
-  "theme": "auto"
+  "theme": "auto",
+  "awsCredentialExport": "\"/Users/moraesf/.toolbox/bin/claude\" default-credential-export"
 }
