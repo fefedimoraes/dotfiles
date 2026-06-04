@@ -1,11 +1,9 @@
 {
-  "availableModels": [
-    "opus",
-    "sonnet"
-  ],
+  "availableModels": ["opus", "sonnet"],
   "enabledPlugins": {
     "AmazonBuilderCoreAIAgents-core@aim": true,
     "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true,
+    "ChorusAIM-all@aim": true,
     "jdtls-lsp@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true
   },
@@ -40,7 +38,13 @@
       "mcp__builder-mcp__InternalCodeSearch",
       "mcp__builder-mcp__InternalSearch",
       "mcp__builder-mcp__ReadInternalWebsites",
-      "mcp__builder-mcp__TicketingReadActions"
+      "mcp__builder-mcp__TicketingReadActions",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__comments",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__docs",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__markdown",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__search",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__sheet",
+      "mcp__plugin_ChorusAIM-all_chorus-mcp__table"
     ]
   },
   "statusLine": {
