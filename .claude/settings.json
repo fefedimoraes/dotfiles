@@ -1,25 +1,9 @@
 {
-  "availableModels": ["opus", "sonnet"],
-  "enabledPlugins": {
-    "AmazonBuilderCoreAIAgents-core@aim": true,
-    "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true,
-    "ChorusAIM-all@aim": true,
-    "jdtls-lsp@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
-  },
+  "awsCredentialExport": "\"/Users/moraesf/.toolbox/bin/claude\" default-credential-export",
   "env": {
     "AWS_REGION": "us-west-2"
   },
-  "extraKnownMarketplaces": {
-    "aim": {
-      "source": {
-        "path": "/Users/moraesf/.aim/cc-plugins",
-        "source": "directory"
-      }
-    }
-  },
   "includeCoAuthoredBy": false,
-  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(cat *)",
@@ -47,11 +31,30 @@
       "mcp__plugin_ChorusAIM-all_chorus-mcp__table"
     ]
   },
+  "model": "global.anthropic.claude-opus-4-8[1m]",
+  "availableModels": [
+    "opus",
+    "sonnet"
+  ],
   "statusLine": {
-    "command": "bash ~/.claude/statusline-command.sh",
-    "type": "command"
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "AmazonBuilderCoreAIAgents-core@aim": true,
+    "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true,
+    "ChorusAIM-all@aim": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "aim": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/moraesf/.aim/cc-plugins"
+      }
+    }
   },
   "syntaxHighlightingDisabled": false,
-  "theme": "auto",
-  "awsCredentialExport": "\"/Users/moraesf/.toolbox/bin/claude\" default-credential-export"
+  "theme": "auto"
 }
