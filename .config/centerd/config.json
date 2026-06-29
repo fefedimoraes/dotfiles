@@ -1,0 +1,65 @@
+{
+  "options": {
+    "center-mouse-cursor": true,
+    "launch-application": true,
+    "hot-reload-config": true
+  },
+  "applications": {
+    "Ghostty": {
+      "bundle-id": "com.mitchellh.ghostty",
+      "shortcut": ["shift", "control", "t"]
+    },
+    "IntelliJ IDEA": {
+      "bundle-id": "com.jetbrains.intellij",
+      "shortcut": ["shift", "control", "i"]
+    },
+    "Visual Studio Code": {
+      "bundle-id": "com.microsoft.VSCode",
+      "shortcut": ["shift", "control", "v"]
+    },
+    "Xcode": {
+      "bundle-id": "com.apple.dt.Xcode",
+      "shortcut": ["shift", "control", "x"]
+    },
+    "Google Chrome": {
+      "bundle-id": "com.google.Chrome",
+      "shortcut": ["shift", "control", "b"]
+    },
+    "Firefox": {
+      "bundle-id": "org.mozilla.firefox",
+      "shortcut": ["shift", "control", "f"]
+    },
+    "Amazon Chime": {
+      "bundle-id": "com.amazon.Amazon-Chime",
+      "shortcut": ["shift", "control", "a"]
+    },
+    "zoom.us": {
+      "bundle-id": "us.zoom.xos",
+      "shortcut": ["shift", "control", "d"]
+    },
+    "Slack": {
+      "bundle-id": "com.tinyspeck.slackmacgap",
+      "shortcut": ["shift", "control", "s"]
+    },
+    "Microsoft Outlook": {
+      "bundle-id": "com.microsoft.Outlook",
+      "shortcut": ["shift", "control", "m"]
+    },
+    "Messages": {
+      "bundle-id": "com.apple.MobileSMS",
+      "shortcut": ["shift", "control", "y"]
+    },
+    "Finder": {
+      "bundle-id": "com.apple.finder",
+      "shortcut": ["shift", "control", "e"]
+    },
+    "Music": {
+      "bundle-id": "com.apple.Music",
+      "shortcut": ["shift", "control", "z"]
+    },
+    "Tibia": {
+      "bundle-id": "com.tibia.client",
+      "shortcut": ["shift", "option", "control", "t"]
+    }
+  }
+}
