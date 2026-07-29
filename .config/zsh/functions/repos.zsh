@@ -1,3 +1,10 @@
+# Absolute path to this file, captured at source time. repos-pick's fzf reload
+# re-sources it in a fresh non-interactive shell: fzf runs children with
+# `$SHELL -c`, which does not inherit shell functions, and a full `zsh -ic`
+# would drag in the whole interactive config (fzf's own zsh integration,
+# starship, zoxide) just to print a repo list.
+_REPOS_ZSH_SRC="${${(%):-%x}:A}"
+
 # Shared record producer for repos-status / repos-pick.
 # Emits one TAB-delimited record per repo found in $1 (default $PWD):
 #   abs_path <TAB> prefix <TAB> padded_name <TAB> details
@@ -76,7 +83,7 @@ function repos-status() {
     # which would otherwise expand inside these patterns and break parsing.
     case "$1" in
     '-f' | '--files') files=1; shift ;;
-    '--records') records=1; shift ;; # internal: raw records for repos-pick
+    '--records') records=1; shift ;; # print raw TAB-delimited records (debugging)
     '-h' | '--help') print "usage: repos-status [-f|--files] [root-dir]"; return 0 ;;
     *) print -u2 "repos-status: unknown option: $1"; return 2 ;;
     esac
@@ -126,8 +133,9 @@ function repos-status() {
   done
 }
 
-# Fuzzy-pick a sibling git repo by NAME and open it in lazygit.
-# Enter opens lazygit; quitting lazygit returns here with status refreshed.
+# Fuzzy-pick a sibling git repo by NAME and act on it without leaving the picker.
+#   enter  -> open in lazygit; quitting lazygit returns here with status refreshed
+#   ctrl-p -> git pull --ff-only on the selected repo, then refresh
 # Usage: repos-pick [root-dir]   (root resolution matches repos-status)
 function repos-pick() {
   emulate -L zsh
@@ -147,13 +155,31 @@ function repos-pick() {
     if [ -n "$top" ]; then root="${top:h}"; else root="$PWD"; fi
   fi
 
-  # fzf runs child commands with `$SHELL -c` (non-interactive), which does NOT
-  # source .zshrc -- so reload must go through `zsh -ic` to see repos-status.
-  # 2>/dev/null drops the harmless "can't change option: zle" startup noise.
-  local RELOAD="reload(zsh -ic 'repos-status --records ${(q)root}' 2>/dev/null)"
+  # fzf runs child commands with `$SHELL -c`, which inherits no shell functions,
+  # so the reload re-sources just this file instead of starting a full
+  # interactive shell. Both operands go through (q) and the whole command through
+  # (qq), so paths containing spaces or apostrophes survive intact.
+  local _reload_cmd="source ${(q)_REPOS_ZSH_SRC} && _repos_status_records ${(q)root}"
+  local RELOAD="reload(zsh -c ${(qq)_reload_cmd})"
   local PREVIEW='git -C {1} -c color.status=always status --short --branch
     echo
     git -C {1} --no-pager log --color=always --oneline --graph --decorate -n 15'
+
+  # Pull the selected repo. --ff-only never rewrites history: it aborts (exit 128)
+  # if the branch has diverged, leaving local commits untouched. The output is held
+  # on screen only when the pull fails, so refusals cannot scroll past unnoticed.
+  # ctrl-p (not a bare p) so printable keys still type into the query.
+  #
+  # Interpolate this BARE into --bind, never via ${(q)...}: (q) backslash-escapes
+  # the braces to \{1\}, and fzf reads a backslash-prefixed placeholder as escaped,
+  # passing the literal text "{1}" to git. No `zsh -ic` wrapper is needed either --
+  # fzf runs children with $SHELL -c, which is already zsh, so ${pipestatus} works.
+  local PULL='git -C {1} pull --ff-only 2>&1 | tail -20
+    if [ ${pipestatus[1]} -ne 0 ]; then
+      print
+      print -n "pull failed -- press any key to continue"
+      read -k1 -s
+    fi'
 
   # --with-nth hides field 1 (the path) but keeps it available to {1}.
   # --nth indexes the TRANSFORMED line, so --nth 2 is the name (record field 3).
@@ -162,10 +188,11 @@ function repos-pick() {
     fzf --ansi --tabstop 1 \
       --delimiter $'\t' --with-nth '2..' --nth 2 \
       --prompt 'repo> ' \
-      --header "${root}   enter=lazygit  ctrl-r=refresh  ctrl-/=preview" \
+      --header "${root}   enter=lazygit  ctrl-p=pull  ctrl-r=refresh  ctrl-/=preview" \
       --header-first --reverse --no-multi --cycle \
       --preview "$PREVIEW" --preview-window 'right,55%,border-left' \
       --bind 'ctrl-/:toggle-preview' \
       --bind "ctrl-r:$RELOAD" \
+      --bind "ctrl-p:execute($PULL)+$RELOAD" \
       --bind "enter:execute(lazygit -p {1})+$RELOAD"
 }
