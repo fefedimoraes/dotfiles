@@ -20,6 +20,7 @@ return {
       "lua",
       "markdown",
       "markdown_inline",
+      "mermaid",
       "python",
       "query",
       "regex",
