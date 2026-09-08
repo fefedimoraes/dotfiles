@@ -19,7 +19,7 @@ The CLI/TUI tools this repo configures (most installed via `Brewfile`), roughly 
 | **delta**    | Syntax-highlighting pager for Git diffs; wired in as the pager in `.gitconfig`.                            | [site](https://dandavison.github.io/delta/) · [github](https://github.com/dandavison/delta) |
 | **starship** | Fast, cross-shell prompt; here fully themed (Catppuccin Macchiato) with per-language modules.              | [site](https://starship.rs/) · [github](https://github.com/starship/starship)               |
 | **git**      | Distributed version control; configured with delta, conditional Amazon includes, and helper aliases.       | [site](https://git-scm.com/) · [github](https://github.com/git/git)                         |
-| **tmux**     | Terminal multiplexer (panes, windows, persistent sessions); 12 tpm plugins + custom keybinds and popups.   | [site](https://github.com/tmux/tmux/wiki) · [github](https://github.com/tmux/tmux)          |
+| **tmux**     | Terminal multiplexer (panes, windows, persistent sessions); 11 tpm plugins + custom keybinds and popups.   | [site](https://github.com/tmux/tmux/wiki) · [github](https://github.com/tmux/tmux)          |
 | **neovim**   | Hyperextensible Vim-based editor; a LazyVim-based config with ~13 custom plugin specs. Aliased to `v`.     | [site](https://neovim.io/) · [github](https://github.com/neovim/neovim)                     |
 | **zsh**      | The interactive shell itself; modular config under `.config/zsh/` with Zinit plugins and custom functions. | [site](https://www.zsh.org/) · [github](https://github.com/zsh-users/zsh)                   |
 
@@ -38,6 +38,7 @@ The CLI/TUI tools this repo configures (most installed via `Brewfile`), roughly 
 | `keybindings.zsh`  | `edit-command-line` widget and `bindkey`s            |
 | `aliases.zsh`      | All aliases, including the global ones               |
 | `functions/*.zsh`  | One file per group of functions, auto-sourced        |
+| `functions/agents/`| Agent-CLI adapters for the tmux agent pickers        |
 | `integrations.zsh` | nvm (deferred), fzf, zoxide, starship                |
 | `amzn.zsh`         | Amazon-internal config; sourced only if present      |
 
