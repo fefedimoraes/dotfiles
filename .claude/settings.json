@@ -190,7 +190,8 @@
       "mcp__slack-mcp__list_scheduled_messages",
       "mcp__slack-mcp__lookup_user",
       "mcp__slack-mcp__search"
-    ]
+    ],
+    "defaultMode": "plan"
   },
   "model": "global.anthropic.claude-opus-5[1m]",
   "fallbackModel": [
@@ -238,6 +239,7 @@
   "enabledPlugins": {
     "AmazonBuilderCoreAIAgents-core@aim": true,
     "AmazonBuilderCoreAIAgents-pipeline-assistant@aim": true,
+    "AmazonBuilderCoreAIAgents-runtime-configuration-assistant@aim": true,
     "ChorusAIM-all@aim": true,
     "jdtls-lsp@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
@@ -253,5 +255,7 @@
   },
   "syntaxHighlightingDisabled": false,
   "effortLevel": "xhigh",
-  "theme": "auto"
+  "outputStyle": "Concise",
+  "theme": "auto",
+  "tui": "fullscreen"
 }
